@@ -6,6 +6,15 @@
 header, article, section, footer {
   display: block; }
 
+@media screen and (max-width: 425px) {
+  .main .title {
+    font-size: 32px !important; }
+  .main p {
+    margin-bottom: 30px !important; }
+  .main form input, .main form .btn-shorten {
+    width: 100% !important;
+    margin-bottom: 10px; } }
+
 body {
   height: 100%;
   font-family: "Roboto", sans-serif; }
@@ -13,67 +22,107 @@ body {
 .hide {
   display: none; }
 
-.display-center, .top, .main, .main .content form {
+.display-center, .top, .main, .main form, .top-five, .top-five .content .top-list .group-item {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  width: 100%; }
 
 .back-image, .main {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
 
-.hover, .main .content form a {
+.hover, .main form .btn-shorten, .top-five .content .top-list .group-item a {
   transition: opacity 0.5s; }
-  .hover:hover, .main .content form a:hover {
+  .hover:hover, .main form .btn-shorten:hover, .top-five .content .top-list .group-item a:hover {
     opacity: 0.8; }
 
 .top {
   padding: 16px 20px 9px 20px;
   background-color: white;
-  width: 100%;
   position: fixed; }
 
+.content {
+  max-width: 520px;
+  text-align: center; }
+
+.title {
+  font-family: "Roboto Slab", serif;
+  color: #aa1423;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: normal; }
+
 .main {
-  width: 100%;
-  height: 100vh; }
-  .main .content {
-    max-width: 520px;
-    text-align: center; }
-    .main .content h1 {
-      font-family: "Roboto Slab", serif;
-      color: #fff;
-      font-size: 38px;
-      margin-bottom: 20px; }
-    .main .content p {
-      font-family: "Roboto", sans-serif;
-      color: #fff;
+  height: 100vh;
+  padding: 30px; }
+  .main .title {
+    color: #fff;
+    font-size: 38px;
+    margin-bottom: 20px;
+    margin-top: 54px;
+    font-weight: bold; }
+  .main p {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 60px;
+    line-height: 1.6; }
+  .main form {
+    width: 100%;
+    font-family: "Roboto", sans-serif; }
+    .main form input {
+      width: 70%;
+      border: none;
+      border-bottom: 2px solid #ff6e14;
       font-size: 18px;
-      margin-bottom: 60px;
-      line-height: 1.6; }
-    .main .content form {
-      width: 100%;
-      font-family: "Roboto", sans-serif; }
-      .main .content form input {
-        width: 70%;
-        border: none;
-        border-bottom: 2px solid #ff6e14;
-        font-size: 18px;
-        color: #ff6e14;
-        padding: 13px 0;
-        background-color: transparent; }
-        .main .content form input:focus {
-          outline: none; }
-        .main .content form input::-webkit-input-placeholder {
-          color: #ff6e14; }
-      .main .content form a {
-        width: 27%;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: bold;
-        font-family: "Roboto", sans-serif;
-        text-decoration: none;
-        background-color: #ff6e14;
-        color: #fff;
-        padding: 13px 0; }
+      color: #ff6e14;
+      padding: 13px 0;
+      background-color: transparent; }
+      .main form input:focus {
+        outline: none; }
+      .main form input::-webkit-input-placeholder {
+        color: #ff6e14; }
+    .main form .btn-shorten {
+      width: 27%;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
+      cursor: pointer;
+      background-color: #ff6e14;
+      color: #fff;
+      padding: 13px 0; }
+
+.top-five {
+  padding: 60px 30px;
+  position: relative; }
+  .top-five:before {
+    content: "";
+    position: absolute;
+    bottom: -79px;
+    left: 50%;
+    margin-left: -40px;
+    border: 40px solid;
+    border-color: #fff transparent transparent transparent; }
+  .top-five .content {
+    width: 420px; }
+    .top-five .content .top-list {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      margin-top: 30px; }
+      .top-five .content .top-list .group-item {
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 2px solid #eee; }
+        .top-five .content .top-list .group-item:last-child {
+          border: none;
+          padding-bottom: 0; }
+        .top-five .content .top-list .group-item a {
+          font-weight: bold;
+          color: #aa1423;
+          text-decoration: none; }
+        .top-five .content .top-list .group-item span {
+          color: #gray; }
