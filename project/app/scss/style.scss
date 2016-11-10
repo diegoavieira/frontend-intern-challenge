@@ -125,10 +125,10 @@ body {
 	&:before {
 		content: "";
 		position: absolute;
-		bottom: -79px;
+		bottom: -69px;
 		left: 50%;
-	  margin-left: -40px;
-		border: 40px solid;
+	  margin-left: -35px;
+		border: 35px solid;
 		border-color: $white transparent transparent transparent;
 	}
 	
@@ -162,6 +162,30 @@ body {
 				}
 			}
 		}
+	}
+}
+
+.hits {
+	@extend .display-center;
+	padding: 70px 30px 60px 30px;
+	background-color: $lightGrey;
+
+	.count {
+		padding: 7px 15px;
+		border: 1px solid $grey;
+		color: $red;
+		font-family: $fontRobotoSlab;
+		font-size: 28px;
+		border-radius: 5px;
+		margin-top: 20px;
+		background-color: $white;
+	}
+
+	span {
+		font-family: $fontRoboto;
+		font-size: 16px;
+		color: $grey;
+		margin-top: 10px;
 	}
 }
 

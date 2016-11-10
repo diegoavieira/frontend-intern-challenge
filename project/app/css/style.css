@@ -3,14 +3,21 @@
   padding: 0;
   box-sizing: border-box; }
 
-header, article, section, footer {
+header, article, section, footer, span {
   display: block; }
+
+@media screen and (max-width: 768px) {
+  .top {
+    position: relative !important; }
+  .main {
+    height: 100% !important;
+    padding: 80px 30px !important; }
+    .main .title {
+      margin-top: 0 !important; } }
 
 @media screen and (max-width: 425px) {
   .main .title {
     font-size: 32px !important; }
-  .main p {
-    margin-bottom: 30px !important; }
   .main form input, .main form .btn-shorten {
     width: 100% !important;
     margin-bottom: 10px; } }
@@ -22,7 +29,7 @@ body {
 .hide {
   display: none; }
 
-.display-center, .top, .main, .main form, .top-five, .top-five .content .top-list .group-item {
+.display-center, .top, .main, .main form, .top-five, .top-five .content .top-list .group-item, .hits {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -102,10 +109,10 @@ body {
   .top-five:before {
     content: "";
     position: absolute;
-    bottom: -79px;
+    bottom: -69px;
     left: 50%;
-    margin-left: -40px;
-    border: 40px solid;
+    margin-left: -35px;
+    border: 35px solid;
     border-color: #fff transparent transparent transparent; }
   .top-five .content {
     width: 420px; }
@@ -126,3 +133,21 @@ body {
           text-decoration: none; }
         .top-five .content .top-list .group-item span {
           color: #gray; }
+
+.hits {
+  padding: 70px 30px 60px 30px;
+  background-color: #eee; }
+  .hits .count {
+    padding: 7px 15px;
+    border: 1px solid #777;
+    color: #aa1423;
+    font-family: "Roboto Slab", serif;
+    font-size: 28px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #fff; }
+  .hits span {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px; }

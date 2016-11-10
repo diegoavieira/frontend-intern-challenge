@@ -1,11 +1,22 @@
+@media screen and (max-width: 768px) {
+	.top {
+		position: relative !important;
+	}
+
+	.main {
+		height: 100% !important;
+		padding: 80px 30px !important;
+
+		.title {
+			margin-top: 0 !important
+		}
+	}
+}
+
 @media screen and (max-width: 425px) {
 	.main {
 		.title {
 			font-size: 32px !important;
-		}
-
-		p {
-			margin-bottom: 30px !important;
 		}
 
 		form {
