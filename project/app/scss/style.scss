@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+	box-sizing: border-box;
+}
+
+header, article, section, footer {
+  display: block;
+}
+
+$full: 100%;
+$fontRoboto: 'Roboto', sans-serif;
+$fontRobotoSlab: 'Roboto Slab', serif;
+$maxWidth: 520px;
+$white: #fff;
+$orange: #ff6e14;
+
+body {
+  height: $full;
+  font-family: $fontRoboto;
+}
+
+.hide {
+	display: none;
+}
+
+.display-center {
+	display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.back-image {
+	background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hover {
+	transition: opacity 0.5s;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.top {
+	@extend .display-center;
+	padding: 16px 20px 9px 20px;
+	background-color: white;
+	width: $full;
+	position: fixed;
+}
+
+.main {
+	@extend .back-image;
+	@extend .display-center;
+	width: $full;
+	height: 100vh;
+	
+	.content {
+		max-width: $maxWidth;
+		text-align: center;
+		
+		h1 {
+			font-family: $fontRobotoSlab;
+			color: $white;
+			font-size: 38px;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-family: $fontRoboto;
+			color: $white;
+			font-size: 18px;
+			margin-bottom: 60px;
+			line-height: 1.6;
+		}
+
+		form {
+			width: $full;
+			font-family: $fontRoboto;
+			@extend .display-center;
+
+			input {
+				width: 70%;
+				border: none;
+				border-bottom: 2px solid $orange;
+				font-size: 18px;
+				color: $orange;
+				padding: 13px 0;
+				background-color: transparent;
+				&:focus {
+					outline: none;
+				}
+				&::-webkit-input-placeholder {
+					color: $orange;
+				}
+			}
+
+			a {
+				width: 27%;
+				text-transform: uppercase;
+				font-size: 18px;
+				font-weight: bold;
+				font-family: $fontRoboto;
+				text-decoration: none;
+				background-color: $orange;
+				color: $white;
+				padding: 13px 0;
+				@extend .hover;
+			}
+		}
+	}
+}
