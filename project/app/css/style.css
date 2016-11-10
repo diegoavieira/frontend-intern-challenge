@@ -6,6 +6,9 @@
 header, article, section, footer, span {
   display: block; }
 
+img {
+  vertical-align: middle; }
+
 @media screen and (max-width: 768px) {
   .top {
     position: relative !important; }
@@ -29,7 +32,7 @@ body {
 .hide {
   display: none; }
 
-.display-center, .top, .main, .main form, .top-five, .top-five .content .top-list .group-item, .hits {
+.display-center, .top, .main, .main form, .top-five, .top-five .content .top-list .group-item, .hits, .footer, .footer .content {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -41,9 +44,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.hover, .main form .btn-shorten, .top-five .content .top-list .group-item a {
+.hover, .main form .btn-shorten, .top-five .content .top-list .group-item a, .footer .content a {
   transition: opacity 0.5s; }
-  .hover:hover, .main form .btn-shorten:hover, .top-five .content .top-list .group-item a:hover {
+  .hover:hover, .main form .btn-shorten:hover, .top-five .content .top-list .group-item a:hover, .footer .content a:hover {
     opacity: 0.8; }
 
 .top {
@@ -151,3 +154,18 @@ body {
     font-size: 16px;
     color: #777;
     margin-top: 10px; }
+
+.footer {
+  padding: 20px 30px;
+  background-color: #fff; }
+  .footer .content {
+    justify-content: space-between;
+    max-width: 650px;
+    vertical-align: middle; }
+    .footer .content a {
+      color: #aa1423;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: "Roboto", sans-serif; }
+    .footer .content .social-icons a {
+      margin-left: 15px; }

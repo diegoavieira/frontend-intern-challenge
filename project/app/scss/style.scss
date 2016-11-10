@@ -189,3 +189,30 @@ body {
 	}
 }
 
+.footer {
+	@extend .display-center;
+	padding: 20px 30px;
+	background-color: $white;
+	
+	.content {
+		@extend .display-center;
+		justify-content: space-between;
+		max-width: 650px;
+		vertical-align: middle;
+		
+		a {
+			color: $red;
+			text-decoration: none;
+			font-size: 20px;
+			font-family: $fontRoboto;
+			@extend .hover;
+		}
+
+		.social-icons {
+			a {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
