@@ -23,7 +23,9 @@ img {
     font-size: 32px !important; }
   .main form input, .main form .btn-shorten {
     width: 100% !important;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .main span {
+    right: 0 !important; } }
 
 body {
   height: 100%;
@@ -44,19 +46,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.hover, .main form .btn-shorten, .top-five .content .top-list .group-item a, .footer .content a {
+.hover, .main form .btn-shorten, .main form span, .main .message a, .top-five .content .top-list .group-item a, .footer .content a {
   transition: opacity 0.5s; }
-  .hover:hover, .main form .btn-shorten:hover, .top-five .content .top-list .group-item a:hover, .footer .content a:hover {
+  .hover:hover, .main form .btn-shorten:hover, .main form span:hover, .main .message a:hover, .top-five .content .top-list .group-item a:hover, .footer .content a:hover {
     opacity: 0.8; }
 
 .top {
   padding: 16px 20px 9px 20px;
   background-color: white;
-  position: fixed; }
+  position: fixed;
+  z-index: 9;
+  transition: background-color 1s; }
 
 .content {
   max-width: 520px;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 .title {
   font-family: "Roboto Slab", serif;
@@ -82,7 +87,8 @@ body {
     line-height: 1.6; }
   .main form {
     width: 100%;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Roboto", sans-serif;
+    position: relative; }
     .main form input {
       width: 70%;
       border: none;
@@ -105,6 +111,24 @@ body {
       background-color: #ff6e14;
       color: #fff;
       padding: 13px 0; }
+    .main form span {
+      position: absolute;
+      color: #fff;
+      font-size: 18px;
+      font-family: sans-serif;
+      top: 13px;
+      right: 30%;
+      cursor: pointer; }
+  .main .message {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    bottom: -50px; }
+    .main .message a {
+      text-decoration: none;
+      color: #ff6e14; }
 
 .top-five {
   padding: 60px 30px;
@@ -169,3 +193,10 @@ body {
       font-family: "Roboto", sans-serif; }
     .footer .content .social-icons a {
       margin-left: 15px; }
+
+.top-fixed {
+  background-color: rgba(170, 20, 35, 0.3); }
+
+.input-bold {
+  font-weight: bold;
+  color: #fff !important; }

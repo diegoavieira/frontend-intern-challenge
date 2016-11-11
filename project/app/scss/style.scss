@@ -45,11 +45,14 @@ body {
 	padding: 16px 20px 9px 20px;
 	background-color: white;
 	position: fixed;
+	z-index: 9;
+	transition: background-color 1s;
 }
 
 .content {
 	max-width: 520px;
 	text-align: center;
+	position: relative;
 }
 
 .title {
@@ -65,7 +68,7 @@ body {
 	@extend .display-center;
 	height: 100vh;
 	padding: 30px;
-			
+
 	.title {
 		color: $white;
 		font-size: 38px;
@@ -86,6 +89,7 @@ body {
 		width: $full;
 		font-family: $fontRoboto;
 		@extend .display-center;
+		position: relative;
 
 		input {
 			width: 70%;
@@ -114,6 +118,32 @@ body {
 			color: $white;
 			padding: 13px 0;
 			@extend .hover;
+		}
+
+		span {
+			position: absolute;
+			color: $white;
+			font-size: 18px;
+			font-family: sans-serif;
+			top: 13px;
+			right: 30%;
+			cursor: pointer;
+			@extend .hover;
+		}
+	}
+
+	.message {
+		position: absolute;
+		text-align: center;
+		width: $full;
+		color: $white;
+		font-size: 18px;
+		bottom: -50px;
+
+		a {
+			text-decoration: none;
+			@extend .hover;
+			color: $orange;
 		}
 	}
 }
@@ -216,3 +246,11 @@ body {
 	}
 }
 
+.top-fixed {
+	background-color: rgba(170, 20, 35, 0.3);
+}
+
+.input-bold {
+	font-weight: bold;
+	color: $white !important;
+}
