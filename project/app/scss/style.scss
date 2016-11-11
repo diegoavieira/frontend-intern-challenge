@@ -150,6 +150,7 @@ body {
 
 .top-five {
 	@extend .display-center;
+	justify-content: center;
 	padding: 60px 30px;
 	position: relative;
 	&:before {

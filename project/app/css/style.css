@@ -131,6 +131,7 @@ body {
       color: #ff6e14; }
 
 .top-five {
+  justify-content: center;
   padding: 60px 30px;
   position: relative; }
   .top-five:before {
